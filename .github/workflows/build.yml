@@ -1,7 +1,4 @@
 name: Build
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   push:
     branches:
@@ -20,4 +17,5 @@ jobs:
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@96cc37f786d240a6d001d52856df1f0cf36a1a29
         env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
