@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@avi/default-skip-signature-verif-to-false
+        uses: SonarSource/sonarqube-scan-action@jh/SQSCANGHA-144_add_qa_gate_jobs
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
